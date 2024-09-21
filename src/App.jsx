@@ -7,6 +7,7 @@ import Features from './Components/core/Features/Features'
 
 import Feature1 from './Components/core/Features/Feature1'
 import Meal from './Components/core/Ai Meal/Meal'
+import Tracker from './Components/core/Ai Meal/Tracker'
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
   </Routes> 
   <Meal></Meal>
   <Features></Features>
+  <Tracker></Tracker>
   
     </div>
   )
