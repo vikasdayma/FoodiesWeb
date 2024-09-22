@@ -15,13 +15,13 @@ function App() {
   return (
     <div className='' >
  
-   {/* <Routes>
+   <Routes>
    <Route path='/' element={<Home/>} /> 
  
     <Route path='/ourfeatures' element={<Features/>} />
     <Route path='/' element={<Home/>} />
     <Route path='/feature1' element={<Feature1/>} />
-  </Routes>  */}
+  </Routes> 
   <Meal></Meal>
   <Features></Features>
   {/* <Tracker></Tracker> */}
