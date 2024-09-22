@@ -115,4 +115,3 @@ style={{width:"60rem"}}
 
 export default Features
 
-
