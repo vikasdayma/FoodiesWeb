@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PiStarFourFill } from "react-icons/pi";
+// import { PiStarFourFill } from "react-icons/pi";
 import { useTypewriter } from 'react-simple-typewriter'
 
 const Meal = () => {
@@ -53,7 +53,7 @@ const Meal = () => {
  
    <div className= ' flex md:justify-end justify-center items-end   xl:h-1/2'>
    <button className='bg-white font-medium h-[2.6rem] flex justify-center items-center  md:w-[8rem] w-[70vw] rounded-lg mb-5 md:mr-5 '>
-   <PiStarFourFill className='mr-2'/>
+   {/* <PiStarFourFill className='mr-2'/> */}
    Genrate
    </button>
    </div>
