@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { PiStarFourFill } from "react-icons/pi";
 import { useTypewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter';
 import axios from 'axios';
 
 const Meal = () => {
@@ -17,7 +18,8 @@ const Meal = () => {
      "I have chicken, broccoli, and rice. Can you provide a quick and easy one-pot recipe that combines these ingredients? Please include cooking times and any seasonings.",
      "Give me a delicious dessert recipe using chocolate, berries, and cream cheese. I'd like step-by-step instructions and tips for presentation",
        "Message Foodgpt" ],
-    loop: 1, //
+  
+     //
     typeSpeed:10,
     deleteSpeed: 10,
     delaySpeed: 500,
@@ -32,13 +34,14 @@ const Meal = () => {
   }
  const handleGenrate=()=>{
   // if(prompt!=""){
-  setQuestion(prompt);
-  
+  setQuestion(prompt)
+ 
   //}
  }
 
   async function generateAnswer(e) {
     setGeneratingAnswer(true);
+    setPrompt("")
     e.preventDefault();
     setAnswer("Loading your answer... \n It might take upto 10 seconds");
     try {
@@ -84,7 +87,7 @@ const Meal = () => {
   <div className='bg-gray-600 w-[80vw] xl:h-[12vw] h-[45vh] flex-col overflow-hidden relative rounded-md'>
   <div className='xl:h-1/2 h-[82%] ml-3 mr-3  '>
     
-  <textarea type="text" placeholder={`${text}`} className='w-[79vw] pr-5 mt-2 text-lg font-medium  text-white h-14 overflow-hidden resize-none bg-gray-600 outline-none' 
+  <textarea type="text" placeholder={`${text}`} value={prompt} className='w-[79vw] pr-5 mt-2 text-lg font-medium  text-white h-14 overflow-hidden resize-none bg-gray-600 outline-none' 
   onChange={handlePrompt} />
   </div>
 
@@ -106,16 +109,25 @@ const Meal = () => {
 
 
  
- </form>
+ </form> 
+ <h1 className='text-3xl text-center'>Answer</h1>
+ <br />
  <div className='flex justify-center items-center w-[100%]'>
-  <div className='flex  text-wrap justify-center w-[40vw] font-medium border-4'>
-   <h1 className='text-wrap text-lg'>{answer}</h1>
+ 
+  <div className='flex  text-wrap justify-center w-[80vw] font-medium '>
+
+ 
+           <h1 className=''>{answer}</h1> 
+  
    </div>
+  
  </div>
  </>
   )
 }
 
 export default Meal
+
+
 
 
