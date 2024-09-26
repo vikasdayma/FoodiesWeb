@@ -14,12 +14,13 @@ const Home = () => {
    
      <Navbar></Navbar>
      <div className='h-[50vh] w-full flex justify-cent3er items-center'>
-      <h1 className='text-start ml-3  text-8xl o opacity-80 text-white font-bold'
+      {/* <h1 className='text-start ml-3  text-8xl o opacity-80 text-white font-bold'
       style={
         {
           textShadow:"10px 10px black"
         }
-      }>Eat Food Of Your Choice</h1>
+      }>Eat Food Of Your Choice</h1> */}
+      
      </div>
     </div>
   )
