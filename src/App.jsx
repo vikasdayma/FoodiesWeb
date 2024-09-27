@@ -19,12 +19,13 @@ function App() {
  
    <Routes>
   
-   <Route path='/' element={<MealPlannerForm/>} />  
+   <Route path='/' element={<Home/>} />  
+   <Route path='/mealplanner' element={<MealPlannerForm/>} />  
    {/* <Route path='/mealplanner' element={<Meal/>}  />
    <Route path='/ourfeatures' element={<Meal/>}  />
    <Route path='/mealplanner' element={<Meal/>}  /> */}
   </Routes>
-  
+  {/* <MealPlannerForm></MealPlannerForm> */}
 
 
 

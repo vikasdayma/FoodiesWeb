@@ -11,7 +11,7 @@ const DekstopView = () => {
         </div>
         
         <div className='flex w-1/2 items-center  justify-evenly'>
-        <Navlink text='Our Features' to='/ourfeatures' />
+        <Navlink text='Our Features' to='/mealplanner' />
         <Navlink text='Search And Discover' to='/searchanddiscover' />
         <Navlink text='Recipe' to='/recipe' />
         <Navlink text='XYZSS' to='/starship' />

@@ -7,15 +7,24 @@ import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import anime from 'animejs';
+import Button from '../../common/Button';
+import { addFavouriteMeals } from '../../redux/favMeal';
+import { useDispatch } from 'react-redux';
+import { LottiePlayer } from 'lottie-react';
+import preloadAnimation from '../../../animations/Animation - 1727410242994.json'
 const Meal = () => {
   const mealFormData=useSelector((state)=>state.mealdata.value)
-  console.log(mealFormData)
-
+  const a= useSelector(state=>state.meal.value)
+  console.log(a)
+  const dispatch=useDispatch();
   const [question, setQuestion] = useState(mealFormData)
   const [loading, setLoading] = useState(true);
   const [answer, setAnswer] = useState("");
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
-
+  const handleFavourite=()=>{
+   dispatch(addFavouriteMeals(answer))
+   console.log("BH")
+  }
    
  
   // const [text, helper] = useTypewriter({
@@ -82,7 +91,12 @@ const Meal = () => {
         <CircularProgress />
       </Box>
       </div>
-    
+    //   <LottiePlayer
+    //   autoplay
+    //   loop
+    //   src={preloadAnimation}
+    //   style={{ height: '300px', width: '300px' }}
+    // />
        : 
        
    <div className='flex justify-center items-center mt-10 w-[100%] h-auto'>
@@ -92,8 +106,10 @@ const Meal = () => {
    <h1 className='text-sm text-medium font-normal'>{answer}</h1>
    <br />
    <br />
-   <button className='rounded-lg h-10 border-2 w-36 bg-green-600 text-white font-semibold'>Save This Meal</button>
-   <button className='rounded-lg h-10 ml-4 border-2 font-semibold w-44 text-white bg-blue-600'>Genrate Other Meal </button>
+   <Button  onClick={handleFavourite}  className='rounded-lg h-10 border-2 w-36 bg-green-600 text-white font-semibold' text='Save This Meal'></Button>
+   <button  className='rounded-lg h-10 ml-4 border-2 font-semibold w-44 text-white bg-blue-600' > 
+   <a href="/mealplanner">Genrate Other Meal</a>
+   </button>
    </div>
    
    </div>
