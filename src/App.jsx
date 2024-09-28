@@ -17,16 +17,17 @@ function App() {
   return (
     <div className='' >
  
-   <Routes>
+   {/* <Routes>
   
    <Route path='/' element={<Home/>} />  
    <Route path='/mealplanner' element={<MealPlannerForm/>} />  
-   {/* <Route path='/mealplanner' element={<Meal/>}  />
+    <Route path='/mealplanner' element={<Meal/>}  />
    <Route path='/ourfeatures' element={<Meal/>}  />
-   <Route path='/mealplanner' element={<Meal/>}  /> */}
-  </Routes>
+   <Route path='/mealplanner' element={<Meal/>}  /> *
+  </Routes> */}
   {/* <MealPlannerForm></MealPlannerForm> */}
-
+  <Home></Home>
+  <Features></Features>
 
 
     </div>

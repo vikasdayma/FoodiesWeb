@@ -10,8 +10,7 @@ import anime from 'animejs';
 import Button from '../../common/Button';
 import { addFavouriteMeals } from '../../redux/favMeal';
 import { useDispatch } from 'react-redux';
-import { LottiePlayer } from 'lottie-react';
-import preloadAnimation from '../../../animations/Animation - 1727410242994.json'
+
 const Meal = () => {
   const mealFormData=useSelector((state)=>state.mealdata.value)
   const a= useSelector(state=>state.meal.value)

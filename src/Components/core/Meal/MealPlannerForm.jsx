@@ -33,21 +33,27 @@ export default function MealPlannerForm() {
 
   const handleSubmit = (e) => {
     
-    if(formData.name!="" && formData.age!="" && formData.email!="" && formData.foodPreference !=""&& formData.cuisinePreference!=""
-   && formData.mealFrequency!="" && formData.dailyCalories!="" && formData.favoriteIngredients!="" && formData.foodAllergies!="" && formData.dietGoal!=""
-  && formData.excludeIngredients!="" && formData.snackPreference!="" && formData.preferredMealTime!=""
-  && formData.drinkPreference!="" && formData.cookingSkillLevel!=""
+    if(
+  //     formData.name!="" && formData.age!="" && formData.email!="" && formData.foodPreference !=""&& formData.cuisinePreference!=""
+  //  && formData.mealFrequency!="" && formData.dailyCalories!="" && formData.favoriteIngredients!="" && formData.foodAllergies!="" && formData.dietGoal!=""
+  // && formData.excludeIngredients!="" && formData.snackPreference!="" && formData.preferredMealTime!=""
+  // && formData.drinkPreference!="" && formData.cookingSkillLevel!=""
+  !formData.name && !formData.age && !formData.email && !formData.foodPreference&& !formData.cuisinePreference
+  && !formData.mealFrequency && !formData.dailyCalories && !formData.favoriteIngredients && !formData.foodAllergies && !formData.dietGoal
+ && !formData.excludeIngredients && !formData.snackPreference && !formData.preferredMealTime
+ && !formData.drinkPreference && !formData.cookingSkillLevel
    ){
-   
- 
+   }
+   else{
+ console.log('e')
   dispatch(collectData( Object.entries(formData)
   .map(([key, value]) => `${key}: ${value}`)
   .join(", ")))
-
+  console.log('a')
   setIsGenrated(true);
    
-  }
-}
+   
+}}
   
 
  
@@ -233,8 +239,8 @@ export default function MealPlannerForm() {
         <label className="block font-medium mb-1">Food Prefrence</label>
         <Input 
           type="text" 
-          name="drinkPreference" 
-          value={formData.drinkPreference} 
+          name="foodPreference" 
+          value={formData.foodPreference} np
           onInput={handleChange} 
           required
           placeholder="e.g.,Vegan,Vegeterian,Non-Vegeterian"
@@ -246,9 +252,9 @@ export default function MealPlannerForm() {
         <label className="block font-medium mb-1">Cooking Level </label>
         <Input 
           type="text" 
-          name="drinkPreference" 
-          value={formData.drinkPreference} 
-          onInput={handleChange} 
+          name="cookingSkillLevel" 
+          value={formData.cookingSkillLevel}
+          onInput={handleChange}
           required
           placeholder="e.g.,Begineer, Intermediate, Advanced"
         />
