@@ -5,7 +5,7 @@ const Home = () => {
   const backgroundStyle = {
     backgroundImage: `url('bgfood1.jpg')`, // Path to your image
     backgroundSize: 'cover', // Ensures the image covers the entire container
-    // backgroundPosition: 'center center', // Positions the image in the center
+   
     backgroundRepeat: 'no-repeat', // Prevents the image from repeating
     height: '140vh', // Full viewport height to create the illusion of distance
    

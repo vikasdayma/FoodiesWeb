@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import anime from 'animejs';
+
 import Button from '../../common/Button';
 import { addFavouriteMeals } from '../../redux/favMeal';
 import { useDispatch } from 'react-redux';
